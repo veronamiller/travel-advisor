@@ -1,5 +1,7 @@
 import { alpha, makeStyles } from '@material-ui/core/styles';
 
+//TODO:change Color of Header n Search
+
 export default makeStyles((theme) => ({
   title: {
     display: 'none',
