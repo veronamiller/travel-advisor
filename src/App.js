@@ -23,7 +23,7 @@ const App = () => {
             .then((data) => {
                 setPlaces(data);
             })
-    },[coordinates, bounds]);
+    },[bounds, coordinates]);
 
     return(
         <>
