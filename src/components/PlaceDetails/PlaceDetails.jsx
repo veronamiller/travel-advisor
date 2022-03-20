@@ -22,6 +22,19 @@ const PlaceDetails = ({ place }) => {
           <Typography variant="subtitle1">Price</Typography>
           <Typography gutterBottom variant="subtitle2">{place.price_level}</Typography>
         </Box>
+        <Box display="flex" justifyContent="space-between">
+          <Typography variant="subtitle1">Ranking</Typography>
+          <Typography gutterBottom variant="subtitle2">{place.price_level}</Typography>
+        </Box>
+        {place?.awards?.map((award) => (
+          <Box my={1} display="flex" justifyContent="space-between" alignItems="center">
+            <img src={award.images.small} alt={award.display_name} />
+            <Typography variant="subtitle2" color="textSecondary">{award.display_name}</Typography>
+          </Box>
+        ))}
+        {place?.cuisine?.map(({ name })=> (
+          <Chip key={name} size="small" label={name} className={classes.chip}/>
+        ))}
       </CardContent>
     </Card>
   );
